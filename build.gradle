@@ -16,7 +16,7 @@ java {
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://mvnrepo.czechitas.dev/")
+        url = uri("https://mvnrepo.czechitas.dev/maven2/")
     }
 }
 
