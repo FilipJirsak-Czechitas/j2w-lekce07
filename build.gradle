@@ -24,7 +24,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-freemarker'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'dev.czechitas.java2:spring-freemarker-extension:0.9.0'
+    implementation 'dev.czechitas.java2:spring-freemarker-extension:1.0.0'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
