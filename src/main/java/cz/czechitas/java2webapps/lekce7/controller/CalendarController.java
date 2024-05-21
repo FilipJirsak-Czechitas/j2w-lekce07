@@ -4,7 +4,6 @@ import cz.czechitas.java2webapps.lekce7.service.CalendarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,14 +19,10 @@ public class CalendarController {
         this.service = service;
     }
 
-    @ModelAttribute("currentYear")
-    public int getCurrentYear() {
-        return service.getCurrentYear();
-    }
-
     @GetMapping("/")
-    public String index() {
-        return "index";
+    public ModelAndView index() {
+        return new ModelAndView("index")
+                .addObject("year", service.getCurrentYear());
     }
 
     @GetMapping("/vypocet")
