@@ -24,5 +24,5 @@
             <li>${item.label}: <strong>${item.date?date?string.full}</strong></li>
         [/#list]
     </ul>
-    <div><a href="/" class="btn btn-primary">Zpět na úvod</a></div>
+    <div><a href="/?year=${year?c}" class="btn btn-primary">Zpět na úvod</a></div>
 [/#macro]

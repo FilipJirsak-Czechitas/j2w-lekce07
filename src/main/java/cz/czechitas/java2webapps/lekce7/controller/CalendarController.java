@@ -20,9 +20,9 @@ public class CalendarController {
     }
 
     @GetMapping("/")
-    public ModelAndView index() {
+    public ModelAndView index(Integer year) {
         return new ModelAndView("index")
-                .addObject("year", service.getCurrentYear());
+                .addObject("year", year == null ? service.getCurrentYear() : year);
     }
 
     @GetMapping("/vypocet")
